@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+20.times do
+  name = Faker::Name.name
+  email = Faker::Internet.email
+  nickname = Faker::FunnyName.name
+  # avatar = Faker::Avatar.image
+  User.create(name: name, email: email, nickname: nickname)
+end
+
+puts "20 Users Seeded"
