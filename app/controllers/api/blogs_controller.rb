@@ -1,4 +1,4 @@
-class Ap::BlogsController < ApplicationController
+class Api::BlogsController < ApplicationController
   def index
     render json: current_user.blogs
   end
