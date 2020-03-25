@@ -6,8 +6,6 @@ import BlogForm from "./BlogForm";
 const Blogs = (props) => {
   const [blogs, setBlogs] = useState([]);
   const [showForm, setShowForm] = useState(false);
-
-  const addBlog = (blog) => setBlogs([ ...blogs, blog, ]);
   
   useEffect( () => {
     axios.get("/api/blogs")
@@ -26,7 +24,7 @@ const Blogs = (props) => {
       </Segment>
     ))
   }
-
+  const addBlog = (blog) => setBlogs([ ...blogs, blog, ]);
   return (
     <>
       <Header as="h1">My Blogs</Header>
